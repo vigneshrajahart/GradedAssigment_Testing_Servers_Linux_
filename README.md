@@ -41,11 +41,69 @@ Track server performance metrics such as CPU, memory, disk usage, and top proces
 
 ### How to Run
 
-```bash
 cd Task1_SystemMonitoring
 chmod +x monitor.sh
 ./monitor.sh
 cat logs/sys_metrics.log
+
+# Task 1: System Monitoring Setup
+
+## Objective
+Monitor system performance to ensure health, capacity planning, and provide visibility to developers.
+
+## Tools Used
+- `htop`, `nmon`: Live system monitoring
+- `df`, `du`: Disk usage
+- `top`, `ps`: Process monitoring
+
+##  Components
+
+| Script | Description |
+|--------|-------------|
+| `cpu_mem_process_monitor.sh` | Captures CPU and memory usage snapshot |
+| `disk_monitor.sh` | Logs disk usage and size breakdown |
+| `top_process_monitor.sh` | Logs top memory/CPU consuming processes |
+
+## Automation
+Daily cron jobs run at 12:00 AM to log all key metrics.
+
+## Output
+Logs are saved daily in `logs/`:
+- `cpu_mem_YYYY-MM-DD.log`
+- `disk_usage_YYYY-MM-DD.log`
+- `top_processes_YYYY-MM-DD.log`
+
+## Usage
+To manually test a script:
+./monitoring_scripts/cpu_mem_process_monitor.sh
+___# Task 2: User Management and Access Control
+
+## 🎯 Objective
+Create isolated user accounts for developers with secure access and enforce password security policies.
+
+## 🧍‍♂️ Users Created
+- Sarah
+- Mike
+
+## 🗂️ Workspace Structure
+- Sarah: `/home/Sarah/workspace`
+- Mike: `/home/mike/workspace`
+- Permissions: `chmod 700`, owner-only access
+
+## 🔒 Security Policies
+- Default password: `user@Dev123` (to be changed on first login)
+- Password expiry: 30 days
+- Password warning: 7 days before expiry
+- Password complexity: min 8 chars, includes upper/lowercase, digit, and special char
+
+## 📜 Scripts
+- `user_setup.sh`: Creates users, sets password, assigns permissions
+- `password_policy.sh`: Enforces password aging policy
+
+## 📂 Logs
+- `logs/user_creation_YYYY-MM-DD.log`
+- `logs/permission_check_YYYY-MM-DD.log`
+
 ------------------------------------------------------------------------------------------------------------------------------------
 
 # Web Server Backup Automation - Task 3
