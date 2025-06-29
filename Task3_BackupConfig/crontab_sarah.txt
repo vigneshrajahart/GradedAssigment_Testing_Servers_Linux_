@@ -1,0 +1,1 @@
+0 0 * * 2 /absolute/path/to/apache_backup.sh

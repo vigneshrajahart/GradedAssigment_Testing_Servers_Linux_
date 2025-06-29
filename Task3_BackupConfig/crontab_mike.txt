@@ -1,0 +1,1 @@
+0 0 * * 2 /absolute/path/to/nginx_backup.sh
