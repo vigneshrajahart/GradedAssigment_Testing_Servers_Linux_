@@ -22,6 +22,10 @@
 
 ## Logs & Screenshots
 - `logs/` and `screenshots/` folders under each task.
+- All_tasks_Details steps.docx
+- Task 1 Log OUTPUT
+- Task 3 Backupconfig_output
+- Taak 2 will be in Page number 4 of "All_tasks_Details steps.docx"
 
 _____________________________________________________________________________________________________________________
 
